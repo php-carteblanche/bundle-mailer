@@ -10,7 +10,7 @@
 namespace MimeEmail\Controller;
 
 use \CarteBlanche\CarteBlanche;
-use \CarteBlanche\App\Abstracts\AbstractController;
+use \CarteBlanche\Abstracts\AbstractController;
 use \MimeEmail\Lib\EmailTemplate;
 
 /**

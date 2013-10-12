@@ -12,10 +12,7 @@
     }],
     "require": {
         "atelierspierrot/mime-mailer": "dev-master",
-        "carte-blanche/core": "~0.1"
-    },
-    "require-dev": {
-        "carte-blanche/core": "~0.1@dev"
+        "carte-blanche/core": "dev-cb_wip"
     },
     "autoload": { 
         "psr-0": { "MimeEmail": "src" },

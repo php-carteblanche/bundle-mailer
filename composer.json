@@ -1,10 +1,9 @@
 {
     "name": "carte-blanche/bundle-mailer",
     "type": "carte-blanche-bundle",
-    "description": "A bundle to send mass MIME emails.",
+    "description": "A bundle to send mass MIME emails",
     "keywords": [ "carte blanche", "bundles" ],
     "homepage": "http://github.com/php-carteblanche/bundle-mailer",
-    "version": "0.0.1-dev",
     "license": "Apache-2.0",
     "authors": [{
         "name": "Les Ateliers Pierrot & contributors",
@@ -12,12 +11,11 @@
         "homepage": "http://www.ateliers-pierrot.fr/"
     }],
     "require": {
-        "php": ">=5.3.0",
         "atelierspierrot/mime-mailer": "dev-master",
-        "carte-blanche/core": "dev-master"
+        "carte-blanche/core": "~0.1"
     },
     "require-dev": {
-        "carte-blanche/core": "dev-wip"
+        "carte-blanche/core": "~0.1@dev"
     },
     "autoload": { 
         "psr-0": { "MimeEmail": "src" },
@@ -27,6 +25,9 @@
         "type": "composer", "url": "http://packagist.ateliers-pierrot.fr/"
     }],
     "extra": {
-        "views": "src/MimeEmail/views"
+        "views": "src/MimeEmail/views",
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
     }
 }

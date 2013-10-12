@@ -3,14 +3,14 @@
  * CarteBlanche - PHP framework package - MIME email bundle
  * Copyleft (c) 2013 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
- * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/carte-blanche>
+ * License Apache-2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
+ * Sources <http://github.com/php-carteblanche/carteblanche>
  */
 
 namespace MimeEmail\Controller;
 
 use \CarteBlanche\CarteBlanche;
-use \CarteBlanche\App\Abstracts\AbstractController;
+use \CarteBlanche\Abstracts\AbstractController;
 use \MimeEmail\Lib\EmailTemplate;
 
 /**

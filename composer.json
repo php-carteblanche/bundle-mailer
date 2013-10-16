@@ -11,7 +11,7 @@
         "homepage": "http://www.ateliers-pierrot.fr/"
     }],
     "require": {
-        "atelierspierrot/mime-mailer": "dev-master",
+        "atelierspierrot/mime-mailer": "1.*",
         "carte-blanche/core": "dev-cb_wip"
     },
     "autoload": { 

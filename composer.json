@@ -11,11 +11,9 @@
         "homepage": "http://www.ateliers-pierrot.fr/"
     }],
     "require": {
-        "atelierspierrot/mime-mailer": "dev-master",
-        "carte-blanche/core": "~0.1"
-    },
-    "require-dev": {
-        "carte-blanche/core": "~0.1@dev"
+        "atelierspierrot/mime-mailer": "1.*",
+        "carte-blanche/core": "dev-master",
+        "carte-blanche/installer": "dev-master"
     },
     "autoload": { 
         "psr-0": { "MimeEmail": "src" },

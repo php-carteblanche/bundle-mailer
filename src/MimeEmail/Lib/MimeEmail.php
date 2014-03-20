@@ -1,10 +1,13 @@
 <?php
 /**
- * CarteBlanche - PHP framework package - MIME email bundle
- * Copyleft (c) 2013 Pierre Cassat and contributors
- * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
- * License Apache-2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
- * Sources <http://github.com/php-carteblanche/carteblanche>
+ * This file is part of the CarteBlanche PHP framework
+ * (c) Pierre Cassat and contributors
+ * 
+ * Sources <http://github.com/php-carteblanche/bundle-mailer>
+ *
+ * License Apache-2.0
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace MimeEmail\Lib;
@@ -23,7 +26,7 @@ $txt_message = "Hello dude !\n\nMy line 1\nLine 2\nLine 3";
 $txt_message_iso = "Hello dude !\n\nMy line 1 with special chars : é à\nLine 2\nLine 3";
 $html_message = "Hello dude !\n\n<br /><table><tr><td><b>Line 1</b></td><td>Line 2</td><td>Line 3</tr></table>";
 $html_message_iso = "Hello dude !\n\n<br /><table><tr><td><b>My line 1 with special chars : é à</b></td><td>Line 2</td><td>Line 3</tr></table>";
-$test_adress_1 = 'piero.wbmstr@gmail.com';
+$test_adress_1 = 'piwi@ateliers-pierrot.fr';
 $test_name_1 = 'Piero';
 $test_name_1_iso = 'Piéro';
 $test_adress_2 = 'pierre.cassat@gmail.com';

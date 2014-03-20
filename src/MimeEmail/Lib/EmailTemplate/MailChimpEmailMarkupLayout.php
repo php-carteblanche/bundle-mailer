@@ -1,10 +1,13 @@
 <?php
 /**
- * CarteBlanche - PHP framework package - MIME email bundle
- * Copyleft (c) 2013 Pierre Cassat and contributors
- * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
- * License Apache-2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
- * Sources <http://github.com/php-carteblanche/carteblanche>
+ * This file is part of the CarteBlanche PHP framework
+ * (c) Pierre Cassat and contributors
+ * 
+ * Sources <http://github.com/php-carteblanche/bundle-mailer>
+ *
+ * License Apache-2.0
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace MimeEmail\Lib\EmailTemplate;

@@ -1,11 +1,10 @@
 <?php
 /**
- * This file is part of the CarteBlanche PHP framework
- * (c) Pierre Cassat and contributors
- * 
- * Sources <http://github.com/php-carteblanche/bundle-mailer>
+ * This file is part of the CarteBlanche PHP framework.
  *
- * License Apache-2.0
+ * (c) Pierre Cassat <me@e-piwi.fr> and contributors
+ *
+ * License Apache-2.0 <http://github.com/php-carteblanche/carteblanche/blob/master/LICENSE>
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -20,49 +19,49 @@ use \MimeEmail\Lib\EmailTemplate as EmailTemplate;
 class MailChimpEmailMarkupLayout extends EmailTemplate
 {
 
-	protected $template='simple-basic.html';
+    protected $template='simple-basic.html';
 
-	protected $views_dir='MimeEmail/views/MailChimp/';
+    protected $views_dir='MimeEmail/views/MailChimp/';
 
-	protected $variables = array(
-		// globals
-		'MC:SUBJECT'=>'',
-		'MC:CONTENT'=>'',
-		
-		// mailing-list info
-		'LIST:COMPANY'=>'',
-		'HTML:LIST_ADDRESS_HTML'=>'',
-		'HTML:REWARDS'=>'',
-		'LIST:DESCRIPTION'=>'',
+    protected $variables = array(
+        // globals
+        'MC:SUBJECT'=>'',
+        'MC:CONTENT'=>'',
 
-		// utilities
-		'ARCHIVE_PAGE'=>'', // if not ...
-		'UNSUB'=>'', // unsubscribe
-		'UPDATE_PROFILE'=>'', // user account
+        // mailing-list info
+        'LIST:COMPANY'=>'',
+        'HTML:LIST_ADDRESS_HTML'=>'',
+        'HTML:REWARDS'=>'',
+        'LIST:DESCRIPTION'=>'',
 
-		// socials
-		'TWITTER:PROFILEURL'=>'',
-		'FACEBOOK:PROFILEURL'=>'',
-		
-		// automated
-		'CURRENT_YEAR'=>'',
-	);
+        // utilities
+        'ARCHIVE_PAGE'=>'', // if not ...
+        'UNSUB'=>'', // unsubscribe
+        'UPDATE_PROFILE'=>'', // user account
 
-	protected $parsables = array(
-		'#\*\|IFNOT:([A-Z_:]+)\|\*#' => '<?php if (!strlen(\'*|$1|*\')) : ?>',
-		'#\*\|IF:([A-Z_:]+)\|\*#' => '<?php if (strlen(\'*|$1|*\')) : ?>',
-		'#\*\|END:IF\|\*#' => '<?php endif; ?>',
-		'sprintf:#\*\|%s\|\*#' => 'sprintf:%s',
-	);
-	
-	public function __construct()
-	{
-		$this->variables['CURRENT_YEAR'] = date('Y');
-//		$config = CarteBlanche::getKernel()->registry->getStackEntry('globals', null, 'config');
-		$config = CarteBlanche::getConfig('globals');
-		if (!empty($config['author']))
-			$this->variables['LIST:COMPANY'] = $config['author'];
-	}
+        // socials
+        'TWITTER:PROFILEURL'=>'',
+        'FACEBOOK:PROFILEURL'=>'',
+
+        // automated
+        'CURRENT_YEAR'=>'',
+    );
+
+    protected $parsables = array(
+        '#\*\|IFNOT:([A-Z_:]+)\|\*#' => '<?php if (!strlen(\'*|$1|*\')) : ?>',
+        '#\*\|IF:([A-Z_:]+)\|\*#' => '<?php if (strlen(\'*|$1|*\')) : ?>',
+        '#\*\|END:IF\|\*#' => '<?php endif; ?>',
+        'sprintf:#\*\|%s\|\*#' => 'sprintf:%s',
+    );
+
+    public function __construct()
+    {
+        $this->variables['CURRENT_YEAR'] = date('Y');
+//        $config = CarteBlanche::getKernel()->registry->getStackEntry('globals', null, 'config');
+        $config = CarteBlanche::getConfig('globals');
+        if (!empty($config['author']))
+            $this->variables['LIST:COMPANY'] = $config['author'];
+    }
 
 }
 
